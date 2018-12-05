@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.footer {
+    padding: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #b5b5b5;
+    background: #093001;
+}

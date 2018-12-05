@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+/* 头部样式 */
+.top {
+    height: 43px;
+    background: #093001;
+    border-bottom: 2px solid #606060;
+}
+
+.top dl {
+    height: 43px;
+    width: 1000px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.top dl dt {
+    height: 43px;
+    line-height: 43px;
+    color: #fff;
+    float: left;
+    padding: 0 0 0 22px;
+}
+
+.top dl dd {
+    width: 88px;
+    height: 43px;
+    line-height: 43px;
+    float: right;
+    text-align: center;
+}
+
+.top dl dd a {
+    color: #fff;
+	display:inline-block;
+}
+
+.top dl dd a:hover {
+    color: #82ce18;
+    text-decoration: none;
+}
+
+
+/*导航栏*/
+html * {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+.nav {
+	margin-top: 200px;
+}
+.nav * {
+	text-decoration: none;
+	font-size: 9pt;
+}
+.nav * a:hover {
+	background-color: #82ce18;/* 鼠标经过时的红色背景，可自定义 */
+}
+.menu {
+	list-style: none;
+	width: 100%;
+	background-color: #fff;
+	position:relative; 
+	z-index:9999;
+}
+.nav {
+	list-style: none;
+	height: 40px;
+	width: 70em;
+	margin: 0 auto;
+	background-color: #389d1d;
+}
+.nav li {
+	float: left;
+	border-bottom:#fff solid 1px;
+	position: relative;
+}
+.nav li a {
+	color: #fff;
+	height: 38px;
+	line-height: 38px;
+	font-weight: bold;
+	padding: 0 20px;
+	blr:expression(this.onFocus=this.close());
+	blr:expression(this.onFocus=this.blur());
+	display: inline-block;
+}
+.nav li a:focus {
+	-moz-outline-style: none;
+}
+.nav li .sub-nav {
+	position: absolute;
+	top: 39px;
+	left: -1px;
+	list-style: none;
+	background-color: #F5F5DC;
+	display: none;
+}
+
+
+.nav li .sub-nav li {
+	text-align: center;
+	clear: left;
+	width: 140px;
+	height: 35px;
+	line-height: 35px;
+	position: relative;
+}
+.nav li .sub-nav li a {
+	color:#333;
+	height: 34px;
+	line-height: 34px;
+	width: 138px;
+	padding: 0;
+	display: inline-block;
+}

@@ -1,0 +1,113 @@
+
+.clear{
+    clear: both;
+    overflow: hidden;
+}
+ul,li{
+    list-style: none;
+}
+.teacher{
+    width: 70em;
+    margin: 50px auto;
+}
+.teacher li{
+    float: left;
+    width: 192px;
+    margin: 20px 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.teacher li img{
+    width: 192px;
+    height: 258px;
+    border-radius: 5px;
+    vertical-align: bottom;
+}
+
+/* 使照片墙艺术倾斜  动画效果 */
+/* 第一张图片沿X轴顺时针旋转30度 */
+.teacher li:nth-child(1){
+    transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.teacher li:nth-child(2){
+    transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+}
+.teacher li:nth-child(3){
+    transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+}
+.teacher li:nth-child(4){
+    transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+.teacher li:nth-child(5){
+    transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+}
+.teacher li:nth-child(6){
+    transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+.teacher li:nth-child(7){
+    transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+}
+.teacher li:nth-child(8){
+    transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+}
+
+.teacher li:nth-child(9){
+    transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.teacher li:nth-child(10){
+    transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+}
+.teacher li:nth-child(11){
+    transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+}
+.teacher li:nth-child(12){
+    transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+
+/*鼠标移上去，照片恢复原样  缩放效果*/
+.teacher li:hover{
+    transform: rotate(0deg) scale(1.1);
+	-webkit-transform: rotate(0deg) scale(1.1);
+	-moz-transform: rotate(0deg) scale(1.1);
+    
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.teacher li span {
+	position: absolute;
+	bottom: 30px;
+	width: 192px;
+	text-align: center;
+	background: rgba(0,0,0,0.6);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	color: #fff;
+	font-size: 15px;
+	padding: 3px 0;
+}
