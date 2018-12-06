@@ -27,7 +27,7 @@ public class TeacherTotalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    request.getRequestDispatcher("/Teacher/teacher_total.jsp").forward(request, response);
+	    request.getRequestDispatcher("/WEB-INF/jsp/Teacher/teacher_total.jsp").forward(request, response);
 	}
 
 	/**

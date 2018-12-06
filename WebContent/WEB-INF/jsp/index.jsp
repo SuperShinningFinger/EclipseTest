@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="statics/css/index.css" />
 </head>
 <body>
-  <%@include file="/top_nav.jsp"%>
-  <%@include file="/banner.jsp"%>
+  <%@include file="/WEB-INF/jsp/top_nav.jsp"%>
+  <%@include file="/WEB-INF/jsp/banner.jsp"%>
 
 		<div id="page-wrapper">
 			<!-- Main -->
@@ -107,6 +107,6 @@
 			<script src="statics/js/breakpoints.min.js"></script>
 			<script src="statics/js/util.js"></script>
 			<script src="statics/js/main.js"></script>
-  <%@include file="/footer.jsp"%>
+  <%@include file="/WEB-INF/jsp/footer.jsp"%>
 </body>
 </html>

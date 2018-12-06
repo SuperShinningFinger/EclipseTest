@@ -14,14 +14,14 @@
     <div class="top">
            <dl>
               <dt>欢迎来到东北林业大学软件工程网</dt>
-              <dd><a href="#">登录</a></dd>
+              <dd><a href="LoginDisplay">后台管理</a></dd>
            </dl>
     </div>
 <!--导航开始-->
 	<div class="menu" align="center">
     	<img src="statics/images/logo.png" style="margin-top:5px;"/>
 		<ul class="nav">
-			<li><a href="index.jsp" style="background-color:#093001;">首页</a>
+			<li><a href="IndexDisplay" style="background-color:#093001;">首页</a>
 			</li>
 			<li><a href="#">专业介绍</a>
 				<ul class="sub-nav">

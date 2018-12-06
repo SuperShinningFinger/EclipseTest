@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css" href="statics/css/footer.css" />
 </head>
 <body>
-  <%@include file="/top_nav.jsp"%>
-  <%@include file="/banner_bg.jsp"%>
-  <%@include file="/bread.jsp"%>
-  <%@include file="/Teacher/teacher_total_photo.jsp"%>
-  <%@include file="/footer.jsp"%>
+  <%@include file="/WEB-INF/jsp/top_nav.jsp"%>
+  <%@include file="/WEB-INF/jsp/banner_bg.jsp"%>
+  <%@include file="/WEB-INF/jsp/bread.jsp"%>
+  <%@include file="/WEB-INF/jsp/Teacher/teacher_total_photo.jsp"%>
+  <%@include file="/WEB-INF/jsp/footer.jsp"%>
 </body>
 </html>

@@ -27,7 +27,7 @@ public class NewsListDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/News/list_display.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/News/list_display.jsp").forward(request, response);
 	}
 
 	/**
