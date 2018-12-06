@@ -43,7 +43,7 @@
 					<li><a href="#">讲师</a></li>
 				</ul>
 			</li>
-			<li><a href="#">软件新闻</a></li>
+			<li><a href="NewsListDisplay">软件新闻</a></li>
 			<li class="right"><a href="#">登录</a></li>
 		</ul>
 	</div>

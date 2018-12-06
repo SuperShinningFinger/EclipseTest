@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.container {
+	width:70em;
+    margin: 0 auto; 
+    width: 70em; 
+    text-align: center; 
+    font-size: x-large;
+}
+
+.title {
+    margin: 0px;
+    border-bottom: 1px #DFDFDF solid;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    padding-left: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.datetime {
+    text-align: right;
+    font-size: small;
+    font-style: italic;
+    float: right;
+    padding-right: 20%;
+}
+
+.titleleft {
+    float: right;
+    margin: auto auto;
+}
+
+.titleright {
+    float: left;
+    margin: auto auto;
+}

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.display {
+	border:solid 1px #ddd;
+	border-radius:20px;
+	width:71.5em;
+	margin:0 auto;
+	background-color:#f0f0f0;
+	background:url(../images/bg_logo.png) no-repeat center;
+	
+}
+
+#main {
+	background:url(../images/bg_logo.png) no-repeat center; 
+}

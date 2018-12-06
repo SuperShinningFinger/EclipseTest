@@ -73,7 +73,7 @@
 									<!-- Post -->
 										<article class="box post">
 											<header>
-											  <h2><span><strong style="color:#389d1d">软件工程</strong></span>专业介绍</h2>
+											  <h2 style="margin: 0 0 1.5em 0;"><span><strong style="color:#389d1d">软件工程</strong></span>专业介绍</h2>
 											</header>
 											<span class="image featured"><img src="statics/images/software_pic.jpg" alt="" /></span>
 											<p>软件工程专业以IT业需求为导向，培养具有良好综合素质和职业道德，掌握扎实的基础理论和专业知识，具有软件分析、设计、开发、测试与管理能力，
