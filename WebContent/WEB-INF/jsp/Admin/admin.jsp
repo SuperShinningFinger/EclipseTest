@@ -4,7 +4,10 @@
   <h1>选择新闻</h1>
   <div id="content-main">
     <ul class="object-tools">
-      <li> <a href="#" class="addlink"> 增加新闻</a> </li>
+      <li><input type="search" name="search" style="margin:5px 0px 0px 0px;height:40px;vertical-align: bottom;"/> 
+      	  <input type="submit" value="搜索" style="height:40px;margin:0 20px 0px 0px;vertical-align: bottom;"/>
+      </li>
+      <li> <a href="AddNewsDisplay" class="addlink"> 增加新闻</a> </li>
     </ul>
     <div class="module" id="changelist">
         <div class="results">
@@ -27,7 +30,7 @@
             </thead>
             <tbody>
               <tr class="row1">
-                <th class="field-title"><a href="#">我校学生在全国导游大赛中获奖</a></th>
+                <th class="field-title"><a href="ModifyNewsDisplay">我校学生在全国导游大赛中获奖</a></th>
                 <td class="field-author">经济管理学院</td>
                 <td class="field-date">2018-05-15 00:00:00</td>
                 <td class="delete_button"><a href="" style="display:block; width:32px; height:32px;"></a></td>
