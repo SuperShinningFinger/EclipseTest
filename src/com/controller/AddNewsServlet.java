@@ -1,6 +1,9 @@
 package com.controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,17 +15,16 @@ import com.service.NewsService;
 import com.service.ServiceFactory;
 
 /**
- * Servlet implementation class NewsDetailDisplay
+ * Servlet implementation class AddNewsServlet
  */
-@WebServlet("/NewsDetailDisplay")
-public class NewsDetailDisplay extends HttpServlet {
+@WebServlet("/AddNewsServlet")
+public class AddNewsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	// 基于ServiceFactory工厂，获取单例的UserService组件
-	private NewsService newsService = ServiceFactory.getNewsService();
+    private NewsService newsService = ServiceFactory.getNewsService();   
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NewsDetailDisplay() {
+    public AddNewsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,11 +34,20 @@ public class NewsDetailDisplay extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       // TODO Auto-generated method stub
-      // 获取指定ID新闻的详细信息
-      int id = Integer.valueOf(request.getParameter("id"));
-      request.setAttribute("news", newsService.getNews(id));
-      request.getRequestDispatcher("/WEB-INF/jsp/News/detail_display.jsp")
-      .forward(request, response);
+      // 获取请求参数，调用userService组件完成持久化操作，重定向到ListUserServlet
+      String title = request.getParameter("title");
+      String author = request.getParameter("author");
+      SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+      Date date = null;
+		try {
+			date = format.parse(request.getParameter("date"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+      String content = request.getParameter("content");
+      newsService.addNews(title, author, date, content);
+      response.sendRedirect(request.getContextPath() + "/AdminDisplay");
     }
 
 	/**

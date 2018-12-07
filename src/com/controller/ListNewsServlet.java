@@ -1,27 +1,27 @@
 package com.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.service.NewsService;
 import com.service.ServiceFactory;
 
 /**
- * Servlet implementation class IndexDisplay
+ * Servlet implementation class ListNewsServlet
  */
-@WebServlet("/AdminDisplay")
-public class AdminDisplay extends HttpServlet {
+@WebServlet("/ListNewsServlet")
+public class ListNewsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	 // 基于ServiceFactory工厂，获取单例的UserService组件
 	private NewsService newsService = ServiceFactory.getNewsService();   
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminDisplay() {
+    public ListNewsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,12 +29,14 @@ public class AdminDisplay extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	    request.setAttribute("newses", newsService.listNews());
-		request.getRequestDispatcher("/WEB-INF/jsp/Admin/admin_display.jsp").forward(request, response);
-	}
-
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // TODO Auto-generated method stub
+      // 实现加载全部新闻
+      req.setAttribute("newses", newsService.listNews());
+      req.getRequestDispatcher("/WEB-INF/jsp/News/list_display.jsp")
+      .forward(req, resp);
+    }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

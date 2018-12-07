@@ -1,4 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div class="display">
 <div style="width:68em; margin:0 auto;">
   <h1>选择新闻</h1>
@@ -23,24 +25,25 @@
                 <th scope="col" class="sortable column-date"> <div class="text"><a href="">时间</a></div>
                   <div class="clear"></div>
                 </th>
-                <th scope="col" class="action-checkbox-column"> <div class="text"><a>删除</a></div>
+                <th scope="col" class="action-checkbox-column" width="80px"> <div class="text"><a>删除</a></div>
                   <div class="clear"></div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr class="row1">
-                <th class="field-title"><a href="ModifyNewsDisplay">我校学生在全国导游大赛中获奖</a></th>
-                <td class="field-author">经济管理学院</td>
-                <td class="field-date">2018-05-15 00:00:00</td>
-                <td class="delete_button"><a href="" style="display:block; width:32px; height:32px;"></a></td>
+      		<c:forEach items="${newses }" var="news" varStatus="s">
+              <c:if test="${s.count % 2 != 0 }">
+              	<tr class="row1">
+			  </c:if>
+			  <c:if test="${s.count % 2 == 0 }">
+              	<tr class="row2">
+			  </c:if>
+                <th class="field-title"><a href="ModifyNewsDisplay?id=${news.id }">${news.title }</a></th>
+                <td class="field-author">${news.author }</td>
+                <td class="field-date">${news.date }</td>
+                <td class="delete_button"><a href="DeleteNewsServlet?id=${news.id }" style="display:block; width:32px; height:32px;"></a></td>
               </tr>
-              <tr class="row2">
-                <th class="field-title"><a href="/admin/Article/article/4037/change/">我校在第六届全国TRIZ杯大学生创新方法大赛中喜获佳绩</a></th>
-                <td class="field-author">校团委</td>
-                <td class="field-date">2018-05-15 00:00:00</td>
-                <td class="delete_button"><a href="" style="display:block; width:32px; height:32px;"></a></td>
-              </tr>
+            </c:forEach>
             </tbody>
           </table>
         </div>
