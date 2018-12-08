@@ -3,11 +3,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div class="display">
 <div style="width:68em; margin:0 auto;">
-  <h1>选择新闻</h1>
+  <a href="LogoutServlet">&lt;登出</a>
   <div id="content-main">
     <ul class="object-tools">
-      <li><input type="search" name="search" style="margin:5px 0px 0px 0px;height:40px;vertical-align: bottom;"/> 
+      <li>
+      <form action="SearchNewsServlet" method="get">
+      	  <input type="search" name="search" style="margin:5px 0px 0px 0px;height:40px;vertical-align: bottom;"/> 
       	  <input type="submit" value="搜索" style="height:40px;margin:0 20px 0px 0px;vertical-align: bottom;"/>
+      </form>
       </li>
       <li> <a href="AddNewsDisplay" class="addlink"> 增加新闻</a> </li>
     </ul>

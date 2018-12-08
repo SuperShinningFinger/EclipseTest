@@ -110,4 +110,29 @@ public class NewsServiceImpl implements NewsService {
 	      logger.warning(e.getMessage());
 	  }
   }
+  
+  @Override
+  public List<News> searchNews(String str) {
+    // TODO Auto-generated method stub
+    List<News> newses = new ArrayList<>();
+    String sql = "SELECT * FROM News WHERE title LIKE '%" + str + "%'" ;
+    try(Connection conn = DataSourceUtils.getConnection();
+    	PreparedStatement st = conn.prepareStatement(sql);
+    	ResultSet rs = st.executeQuery();
+    	){
+    	while (rs.next()) {
+    		News news = new News();
+    		news.setId(rs.getInt("id"));
+    		news.setTitle(rs.getString("title"));
+    		news.setAuthor(rs.getString("author"));
+    		news.setDate(rs.getDate("Date"));
+    		news.setContent(rs.getString("Content"));
+    		newses.add(news);
+      }  
+    } catch (SQLException e) {
+      // TODO: handle exception
+      logger.warning(e.getMessage());
+    }
+    return newses;
+  }
 }

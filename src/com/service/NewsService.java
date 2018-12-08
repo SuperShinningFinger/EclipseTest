@@ -37,4 +37,12 @@ public interface NewsService {
 	 * @return
 	 */
 	public void deleteNews(int id);
+	
+	
+	/**
+	 * 模糊查询新闻
+	 * @param str
+	 * @return
+	 */
+	public List<News> searchNews(String str);
 }

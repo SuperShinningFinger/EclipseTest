@@ -4,7 +4,7 @@
     				<h4 style="font-size:20px; text-align:center; font-weight:bold;margin:10px;">后台管理</h4>
                 <div class="login-box-cen" style="width:20em">
 					<br /><br />
-					<form action="AdminDisplay" method="get">
+					<form action="LoginDisplay" method="post">
                     <div class="login-box-cen-form clearfix mar-bottom20">
                         <input type="text" class="login-box-cen-form-input w218" placeholder="请输入账号" name="user_name" />
                         <label class="err err-top40" id="login_phone_text">账号错误</label>
