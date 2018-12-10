@@ -43,6 +43,7 @@ public class LoginFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		 // TODO Auto-generated method stub
 	    HttpServletRequest req = (HttpServletRequest) request;
+	    req.setAttribute("position", "后台登录");
 	    // 验证用户登录状态，未登录，重定向到登录页面
 	    User user = (User) req.getSession().getAttribute("user");
 	    if (user != null && user.isIs_admin() == true) {

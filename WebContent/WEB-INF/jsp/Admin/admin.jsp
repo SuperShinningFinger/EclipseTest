@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div class="display">
 <div style="width:68em; margin:0 auto;">
-  <a href="LogoutServlet">&lt;登出</a>
+  <a href="LogoutServlet" class="confirm">&lt;登出</a>
   <div id="content-main">
     <ul class="object-tools">
       <li>
@@ -44,7 +44,7 @@
                 <th class="field-title"><a href="ModifyNewsDisplay?id=${news.id }">${news.title }</a></th>
                 <td class="field-author">${news.author }</td>
                 <td class="field-date">${news.date }</td>
-                <td class="delete_button"><a href="DeleteNewsServlet?id=${news.id }" style="display:block; width:32px; height:32px;"></a></td>
+                <td class="delete_button"><a href="DeleteNewsServlet?id=${news.id }" class="confirm" style="display:block; width:32px; height:32px;"></a></td>
               </tr>
             </c:forEach>
             </tbody>
@@ -54,3 +54,21 @@
   </div>
 </div>
 </div>
+<script type="text/javascript">
+window.onload=function()
+{
+  var zx=document.getElementsByClassName("confirm");
+  for(var i = 0; i < zx.length; i++){
+	  zx[i].onclick=function()
+	  {
+	     if(confirm("确定要继续吗?"))
+	     {
+	       alert('操作成功!');
+	       return true;
+	     }else{
+		   return false;
+		 }
+	  }
+  }
+}
+</script>

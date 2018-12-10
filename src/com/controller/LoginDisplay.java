@@ -33,7 +33,8 @@ public class LoginDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    if (request.getSession().getAttribute("user") != null) {
+		request.setAttribute("position", "后台登录");
+		if (request.getSession().getAttribute("user") != null) {
 		    response.sendRedirect(request.getContextPath() + "/AdminDisplay");
 		    return;
 	    }
@@ -44,6 +45,7 @@ public class LoginDisplay extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    request.setAttribute("position", "后台登录");
 		// TODO Auto-generated method stub // 获取post传入的参数
 		String user_name = request.getParameter("user_name");
 	    String password = request.getParameter("password");

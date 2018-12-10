@@ -24,7 +24,9 @@ $(function(){
 			//end
 			//demo2
 			var regconfig=[
-					{eleinput:"reg_info_company",eletext:"reg_info_company_text",rule:[{reg:/^.+$/,text:"新闻标题不能为空"},{reg:/^.{1,20}$/,text:"新闻标题不超过20个字"}]}
+					{eleinput:"reg_info_company",eletext:"reg_info_company_text",rule:[{reg:/^.+$/,text:"企业名称不能为空"},{reg:/^.{1,20}$/,text:"企业名称不超过20个字"}]},
+					{eleinput:"reg_info_name",eletext:"reg_info_name_text",rule:[{reg:/^.+$/,text:"联系人不能为空"},{reg:/^.{1,20}$/,text:"联系人不超过20个字"}]},
+					{eleinput:"reg_info_email",eletext:"reg_info_email_text",rule:[{reg:/^.+$/,text:"Email地址不能为空"},{reg:/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,text:"Email地址格式错误"}]}
 				];
 			tbdValidate(
 				regconfig,

@@ -27,6 +27,7 @@ public class AddNewsDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("position", "添加新闻");
 		request.getRequestDispatcher("/WEB-INF/jsp/Admin/add_news_display.jsp").forward(request, response);
 	}
 

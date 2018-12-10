@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.entity.News;
 import com.service.NewsService;
 import com.service.ServiceFactory;
 
@@ -34,7 +35,9 @@ public class NewsDetailDisplay extends HttpServlet {
       // TODO Auto-generated method stub
       // 获取指定ID新闻的详细信息
       int id = Integer.valueOf(request.getParameter("id"));
-      request.setAttribute("news", newsService.getNews(id));
+      News news = newsService.getNews(id);
+      request.setAttribute("news", news);
+	    request.setAttribute("position", "新闻浏览");
       request.getRequestDispatcher("/WEB-INF/jsp/News/detail_display.jsp")
       .forward(request, response);
     }

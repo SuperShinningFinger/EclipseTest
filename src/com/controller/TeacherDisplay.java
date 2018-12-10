@@ -7,12 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.entity.Teacher;
+import com.service.ServiceFactory;
+import com.service.TeacherService;
+
 /**
  * Servlet implementation class TeacherDisplay
  */
 @WebServlet("/TeacherDisplay")
 public class TeacherDisplay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+    private TeacherService teacherService = ServiceFactory.getTeacherService(); 
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -27,6 +32,10 @@ public class TeacherDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("position", "教师信息");
+		int id = Integer.parseInt(request.getParameter("id"));
+		Teacher teacher = teacherService.getTeacher(id);
+		request.setAttribute("teacher", teacher);
 		request.getRequestDispatcher("/WEB-INF/jsp/Teacher/Infoes/teacher1_display.jsp").forward(request, response);
 	}
 

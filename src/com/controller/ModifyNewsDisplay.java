@@ -31,6 +31,7 @@ public class ModifyNewsDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("position", "修改新闻");
 		int id = Integer.parseInt(request.getParameter("id"));
 	    request.setAttribute("news", newsService.getNews(id));
 		request.getRequestDispatcher("/WEB-INF/jsp/Admin/modify_news_display.jsp").forward(request, response);

@@ -31,6 +31,7 @@ public class AdminDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("position", "后台管理");
 	    request.setAttribute("newses", newsService.listNews());
 		request.getRequestDispatcher("/WEB-INF/jsp/Admin/admin_display.jsp").forward(request, response);
 	}

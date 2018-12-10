@@ -33,7 +33,7 @@ public class NewsServiceImpl implements NewsService {
   public List<News> listNews() {
     // TODO Auto-generated method stub
     List<News> newses = new ArrayList<>();
-    String sql = "SELECT * FROM News";
+    String sql = "SELECT * FROM News ORDER BY date DESC";
     try(Connection conn = DataSourceUtils.getConnection();
     	PreparedStatement st = conn.prepareStatement(sql);
     	ResultSet rs = st.executeQuery();
@@ -115,7 +115,7 @@ public class NewsServiceImpl implements NewsService {
   public List<News> searchNews(String str) {
     // TODO Auto-generated method stub
     List<News> newses = new ArrayList<>();
-    String sql = "SELECT * FROM News WHERE title LIKE '%" + str + "%'" ;
+    String sql = "SELECT * FROM news WHERE title LIKE '%" + str + "%' ORDER BY date DESC" ;
     try(Connection conn = DataSourceUtils.getConnection();
     	PreparedStatement st = conn.prepareStatement(sql);
     	ResultSet rs = st.executeQuery();

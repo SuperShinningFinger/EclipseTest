@@ -31,6 +31,7 @@ public class SearchNewsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    request.setAttribute("position", "搜索");
 		String str = request.getParameter("search");
 	    request.setAttribute("newses", newsService.searchNews(str));
 		request.getRequestDispatcher("/WEB-INF/jsp/Admin/admin_display.jsp").forward(request, response);

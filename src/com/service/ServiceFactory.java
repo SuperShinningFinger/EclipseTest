@@ -3,6 +3,7 @@ package com.service;
 import java.util.Optional;
 
 import com.service.impl.NewsServiceImpl;
+import com.service.impl.TeacherServiceImpl;
 import com.service.impl.UserServiceImpl;
 
 public class ServiceFactory {
@@ -21,5 +22,14 @@ public class ServiceFactory {
 				.orElseGet(() ->{
 					userService = new UserServiceImpl();
 					return userService;}); 
+	}
+
+
+	private static TeacherService teacherService;
+	public static TeacherService getTeacherService() {
+		return Optional.ofNullable(teacherService)
+				.orElseGet(() ->{
+					teacherService = new TeacherServiceImpl();
+					return teacherService;}); 
 	}
 }

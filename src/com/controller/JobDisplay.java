@@ -1,30 +1,23 @@
 package com.controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.entity.Teacher;
-import com.service.NewsService;
-import com.service.ServiceFactory;
-import com.service.TeacherService;
-
 /**
- * Servlet implementation class TeacherTotalServlet
+ * Servlet implementation class JobDisplay
  */
-@WebServlet("/TeacherTotalServlet")
-public class TeacherTotalServlet extends HttpServlet {
+@WebServlet("/JobDisplay")
+public class JobDisplay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private TeacherService teacherService = ServiceFactory.getTeacherService(); 
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TeacherTotalServlet() {
+    public JobDisplay() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,15 +27,9 @@ public class TeacherTotalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String title = request.getParameter("title");
-		if ("all".equals(title)) {
-			request.setAttribute("position", "全部教师");
-		} else {
-			request.setAttribute("position", title);
-		}
-		List<Teacher> teachers = teacherService.listTitleTeacher(title);
-		request.setAttribute("teachers", teachers);
-	    request.getRequestDispatcher("/WEB-INF/jsp/Teacher/teacher_total.jsp").forward(request, response);
+	    request.setAttribute("position", "就业指导");
+	      request.getRequestDispatcher("/WEB-INF/jsp/Job/job.jsp")
+	      .forward(request, response);
 	}
 
 	/**

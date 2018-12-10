@@ -6,11 +6,11 @@
 					<br /><br />
 					<form action="LoginDisplay" method="post">
                     <div class="login-box-cen-form clearfix mar-bottom20">
-                        <input type="text" class="login-box-cen-form-input w218" placeholder="请输入账号" name="user_name" />
+                        <input type="text" class="login-box-cen-form-input w218" placeholder="请输入账号" name="user_name" id="login_phone"/>
                         <label class="err err-top40" id="login_phone_text">账号错误</label>
                     </div>
                     <div class="login-box-cen-form clearfix mar-bottom20">
-                        <input type="text" class="login-box-cen-form-input w218" placeholder="请输入密码" name="password" />
+                        <input type="password" class="login-box-cen-form-input w218" placeholder="请输入密码" name="password" id="login_password"/>
                         <label class="err err-top40" id="login_password_text">请输入密码</label>
                     </div>
                     <div class="login-box-cen-form clearfix">

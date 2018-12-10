@@ -6,13 +6,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>东北林业大学软件工程-后台管理</title>
+<title>东北林业大学软件工程 - ${position }</title>
 
 <link rel="stylesheet" type="text/css" href="statics/css/footer.css" />
 <link rel="stylesheet" type="text/css" href="statics/css/top_nav.css" />
 <link rel="stylesheet" type="text/css" href="statics/css/index.css" />
 <link rel="stylesheet" type="text/css" href="statics/css/display.css" />
 <link rel="stylesheet" type="text/css" href="statics/css/login.css" />
+<link rel="icon" href="statics/images/icon.ico" type="image/x-icon"/>
 </head>
 <body>
   <%@include file="/WEB-INF/jsp/top_nav.jsp"%>

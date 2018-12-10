@@ -14,17 +14,16 @@ import com.service.NewsService;
 import com.service.ServiceFactory;
 
 /**
- * Servlet implementation class IndexDisplay
+ * Servlet implementation class LabDisplay
  */
-@WebServlet("/IndexDisplay")
-public class IndexDisplay extends HttpServlet {
+@WebServlet("/LabDisplay")
+public class LabDisplay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private NewsService newsService = ServiceFactory.getNewsService();   
-       
+	private NewsService newsService = ServiceFactory.getNewsService();  
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IndexDisplay() {
+    public LabDisplay() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +33,7 @@ public class IndexDisplay extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    request.setAttribute("position", "主页");
+	    request.setAttribute("position", "实验室");	    
 		List<News> allnewses = newsService.listNews();
 		List<News> newses = allnewses;
 		if (allnewses.size() > 5) { 
@@ -46,22 +45,23 @@ public class IndexDisplay extends HttpServlet {
 			}
 		}
 	    request.setAttribute("newses", newses);
-	    int select = Integer.parseInt(request.getParameter("select"));
+		int select = Integer.parseInt(request.getParameter("select"));
 	    switch(select){
-		    case 0:
-		    	request.setAttribute("select", "Introduction/general.jsp");
-		        break;
-		    case 1:
-		    	request.setAttribute("select", "Introduction/introduction.jsp");
-		        break;
-		    case 2:
-		    	request.setAttribute("select", "Introduction/direction.jsp");
-		        break;
-		    default:
-		    	request.setAttribute("select", "Introduction/introduction.jsp");
-		        break;
+	    case 1:
+	    	request.setAttribute("select", "Lab/lab1.jsp");
+	        break;
+	    case 2:
+	    	request.setAttribute("select", "Lab/lab2.jsp");
+	        break;
+	    case 3:
+	    	request.setAttribute("select", "Lab/lab3.jsp");
+	        break;
+	    default:
+	    	request.setAttribute("select", "Lab/general.jsp");
+			request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+			return;
 	    }
-		request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/Lab/lab_display.jsp").forward(request, response);
 	}
 
 	/**

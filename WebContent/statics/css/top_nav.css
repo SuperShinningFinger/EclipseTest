@@ -96,6 +96,7 @@ html * {
 	list-style: none;
 	background-color: #F5F5DC;
 	display: none;
+	opacity:0.8;
 }
 
 

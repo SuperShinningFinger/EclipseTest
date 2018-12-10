@@ -46,10 +46,7 @@ input:focus, textarea:focus {
 .err-top90 {
 	top: 90px;
 }
-/*上传*/
-#reg_info_file_base64 {
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
-}
+
 /*登录*/
 .login-box-cen {
 	width: 240px;

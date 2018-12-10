@@ -35,6 +35,7 @@ public class UpdateNewsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setAttribute("position", "修改新闻");
 	    int id = Integer.valueOf(request.getParameter("nid"));
 	    String newTitle = request.getParameter("title");
 	    String newAuthor = request.getParameter("author");

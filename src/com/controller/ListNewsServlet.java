@@ -16,7 +16,6 @@ import com.service.ServiceFactory;
 @WebServlet("/ListNewsServlet")
 public class ListNewsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	 // 基于ServiceFactory工厂，获取单例的UserService组件
 	private NewsService newsService = ServiceFactory.getNewsService();   
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,6 +31,7 @@ public class ListNewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       // TODO Auto-generated method stub
+	  req.setAttribute("position", "软件新闻");
       // 实现加载全部新闻
       req.setAttribute("newses", newsService.listNews());
       req.getRequestDispatcher("/WEB-INF/jsp/News/list_display.jsp")
