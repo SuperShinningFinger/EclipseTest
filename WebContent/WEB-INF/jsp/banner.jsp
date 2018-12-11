@@ -1,15 +1,15 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!--轮播开始-->
 
 	<div class="wrapper">
 		<div id="focus">
 	  <ul>
-				<li><a href="http://www.17sucai.com/" target="_blank"><img src="statics/images/banner/banner1.jpg" alt="新闻轮播1" /></a></li>
-				<li><a href="http://www.17sucai.com/" target="_blank"><img src="statics/images/banner/banner2.jpg" alt="新闻轮播2" /></a></li>
-				<li><a href="http://www.17sucai.com/" target="_blank"><img src="statics/images/banner/banner3.jpg" alt="新闻轮播3" /></a></li>
-				<li><a href="http://www.17sucai.com/" target="_blank"><img src="statics/images/banner/banner4.jpg" alt="新闻轮播4" /></a></li>
-				<li><a href="http://www.17sucai.com/" target="_blank"><img src="statics/images/banner/banner5.jpg" alt="新闻轮播5" /></a></li>
-			</ul>
+			<c:forEach items="${newses }" var="news" varStatus="t">
+				<li><a href="NewsDetailDisplay?id=${news.id }" target="_blank"><img src="statics/images/banner/banner${t.count }.jpg" alt="新闻轮播1" /></a></li>
+			</c:forEach>	
+	  </ul>
 		</div><!--focus end-->
 	
 	</div><!-- wrapper end -->

@@ -41,8 +41,13 @@ public class IndexDisplay extends HttpServlet {
 			newses = allnewses.subList(0, 4);
 		}
 		for (News news : newses) {
-			if (news.getContent().length() >= 20) {
-				news.setContent(news.getContent().substring(0, 20));
+			if (news.getContent().length() >= 40) {
+				news.setContent(news.getContent().substring(0, 40));
+			}
+		}
+		for (News news : newses) {
+			if (news.getTitle().length() >= 20) {
+				news.setTitle(news.getContent().substring(0, 20) + "...");
 			}
 		}
 	    request.setAttribute("newses", newses);

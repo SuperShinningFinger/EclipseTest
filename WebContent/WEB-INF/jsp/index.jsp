@@ -64,7 +64,6 @@
 			<script src="statics/js/browser.min.js"></script>
 			<script src="statics/js/breakpoints.min.js"></script>
 			<script src="statics/js/util.js"></script>
-			<script src="statics/js/main.js"></script>
   <%@include file="/WEB-INF/jsp/footer.jsp"%>
 </body>
 </html>
