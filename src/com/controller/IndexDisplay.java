@@ -47,7 +47,7 @@ public class IndexDisplay extends HttpServlet {
 		}
 		for (News news : newses) {
 			if (news.getTitle().length() >= 20) {
-				news.setTitle(news.getContent().substring(0, 20) + "...");
+				news.setTitle(news.getTitle().substring(0, 20) + "...");
 			}
 		}
 	    request.setAttribute("newses", newses);

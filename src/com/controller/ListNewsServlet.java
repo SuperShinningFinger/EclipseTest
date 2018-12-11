@@ -40,7 +40,7 @@ public class ListNewsServlet extends HttpServlet {
       req.setAttribute("newses", newses);
 		for (News news : newses) {
 			if (news.getTitle().length() >= 20) {
-				news.setTitle(news.getContent().substring(0, 20) + "...");
+				news.setTitle(news.getTitle().substring(0, 20) + "...");
 			}
 		}
       req.getRequestDispatcher("/WEB-INF/jsp/News/list_display.jsp")
