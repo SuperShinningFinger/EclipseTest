@@ -30,8 +30,8 @@
 			</li>
 			<li><a href="LabDisplay?select=0">实验室</a>
 				<ul class="sub-nav">
-					<li><a href="LabDisplay?select=1">923 创新实验室</a></li>
-					<li><a href="LabDisplay?select=2">925 移动开发实验室</a></li>
+					<li><a href="LabDisplay?select=1">925 移动开发实验室</a></li>
+					<li><a href="LabDisplay?select=2">923 创新实验室</a></li>
 					<li><a href="LabDisplay?select=3">923 实验室</a></li>
 				</ul>
 			</li>
